@@ -35,10 +35,16 @@ export default function ClientLayout({
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center h-screen bg-slate-950">
+      <div className="flex items-center justify-center h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto"></div>
-          <p className="mt-4 text-slate-300">Loading...</p>
+          <div className="relative">
+            <div className="animate-spin rounded-full h-16 w-16 border-4 border-blue-500/20 border-t-blue-500 mx-auto"></div>
+            <div className="absolute inset-0 rounded-full h-16 w-16 border-4 border-cyan-500/20 border-t-cyan-500 animate-spin mx-auto" style={{ animationDirection: 'reverse', animationDuration: '1.5s' }}></div>
+          </div>
+          <p className="mt-6 text-slate-300 text-lg font-medium">Loading Airdrop Tracker...</p>
+          <div className="mt-2 w-32 h-1 bg-slate-800 rounded-full mx-auto overflow-hidden">
+            <div className="h-full bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full animate-pulse"></div>
+          </div>
         </div>
       </div>
     );

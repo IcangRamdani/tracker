@@ -49,8 +49,8 @@ export default function DashboardPage() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-3xl font-bold text-white">Dashboard</h1>
-        <p className="text-slate-400 mt-2">Welcome back, {user?.email}</p>
+        <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-white animate-pulse">Dashboard</h1>
+        <p className="text-slate-400 mt-2 text-lg">Welcome back, {user?.email}</p>
       </div>
 
       {/* Summary Cards */}
@@ -95,16 +95,16 @@ export default function DashboardPage() {
         ].map((card, idx) => {
           const Icon = card.icon;
           const colorClasses = {
-            blue: 'bg-blue-500/20 text-blue-400',
-            green: 'bg-green-500/20 text-green-400',
-            yellow: 'bg-yellow-500/20 text-yellow-400',
-            purple: 'bg-purple-500/20 text-purple-400',
-            red: 'bg-red-500/20 text-red-400',
-            cyan: 'bg-cyan-500/20 text-cyan-400',
+            blue: 'bg-gradient-to-br from-blue-500/20 to-blue-600/10 text-blue-400 border-blue-500/20',
+            green: 'bg-gradient-to-br from-green-500/20 to-green-600/10 text-green-400 border-green-500/20',
+            yellow: 'bg-gradient-to-br from-yellow-500/20 to-yellow-600/10 text-yellow-400 border-yellow-500/20',
+            purple: 'bg-gradient-to-br from-purple-500/20 to-purple-600/10 text-purple-400 border-purple-500/20',
+            red: 'bg-gradient-to-br from-red-500/20 to-red-600/10 text-red-400 border-red-500/20',
+            cyan: 'bg-gradient-to-br from-cyan-500/20 to-cyan-600/10 text-cyan-400 border-cyan-500/20',
           };
 
           return (
-            <Card key={idx} className="bg-slate-800 border-slate-700">
+            <Card key={idx} className={`hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-${card.color}-500/10 border ${colorClasses[card.color as keyof typeof colorClasses]} bg-slate-800/50 backdrop-blur-sm`}>
               <CardContent className="pt-6">
                 <div className="flex items-center justify-between">
                   <div>

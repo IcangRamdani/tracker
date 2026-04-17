@@ -34,13 +34,13 @@ const Sidebar = () => {
   ];
 
   return (
-    <aside className="w-64 bg-slate-950 border-r border-slate-800 flex flex-col h-screen">
+    <aside className="w-64 bg-slate-950/95 backdrop-blur-xl border-r border-slate-800/50 flex flex-col h-screen shadow-2xl">
       {/* Logo */}
-      <div className="p-6 border-b border-slate-800">
-        <h1 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+      <div className="p-6 border-b border-slate-800/50">
+        <h1 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 animate-pulse">
           AirdropTrack
         </h1>
-        <p className="text-xs text-slate-400 mt-1">Professional Farming</p>
+        <p className="text-xs text-slate-400 mt-1 tracking-wide">Professional Farming</p>
       </div>
 
       {/* Navigation */}
@@ -53,10 +53,10 @@ const Sidebar = () => {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${
+                  className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-200 hover:scale-105 ${
                     active
-                      ? 'bg-blue-600 text-white'
-                      : 'text-slate-300 hover:bg-slate-800'
+                      ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg shadow-blue-500/25'
+                      : 'text-slate-300 hover:bg-slate-800/50 hover:text-white hover:shadow-md'
                   }`}
                 >
                   <Icon className="w-5 h-5" />
@@ -72,7 +72,7 @@ const Sidebar = () => {
       <div className="p-4 border-t border-slate-800">
         <button
           onClick={handleLogout}
-          className="flex items-center gap-3 px-4 py-3 w-full rounded-lg text-slate-300 hover:bg-red-600/20 hover:text-red-400 transition-colors"
+          className="flex items-center gap-3 px-4 py-3 w-full rounded-lg text-slate-300 hover:bg-red-600/20 hover:text-red-400 transition-all duration-200 hover:scale-105 hover:shadow-md"
         >
           <LogOut className="w-5 h-5" />
           <span className="text-sm font-medium">Logout</span>
