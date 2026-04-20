@@ -25,7 +25,7 @@ export default function SignupPage() {
     setError('');
 
     if (password !== confirmPassword) {
-      setError('Passwords do not match');
+      setError('Password tidak cocok');
       setLoading(false);
       return;
     }
@@ -45,8 +45,8 @@ export default function SignupPage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-950 to-blue-950 flex items-center justify-center p-4">
       <Card className="w-full max-w-md">
         <CardHeader className="space-y-2">
-          <CardTitle className="text-2xl">Create Account</CardTitle>
-          <CardDescription>Join Airdrop Tracker today</CardDescription>
+          <CardTitle className="text-2xl">Buat Akun</CardTitle>
+          <CardDescription>Gabung dengan Airdrop Tracker hari ini</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           {error && (
@@ -60,7 +60,7 @@ export default function SignupPage() {
               <label className="text-sm font-medium">Email</label>
               <Input
                 type="email"
-                placeholder="your@email.com"
+                placeholder="email@anda.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required

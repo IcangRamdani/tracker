@@ -84,21 +84,21 @@ export default function SettingsPage() {
   return (
     <div className="space-y-6 max-w-2xl">
       <div>
-        <h1 className="text-3xl font-bold text-white">Settings</h1>
-        <p className="text-slate-400 mt-2">Manage your account and preferences</p>
+        <h1 className="text-3xl font-bold text-white">Pengaturan</h1>
+        <p className="text-slate-400 mt-2">Kelola akun dan preferensi kamu</p>
       </div>
 
       {/* Account Info */}
       <Card className="bg-slate-800 border-slate-700">
         <CardHeader>
-          <CardTitle>Account Information</CardTitle>
-          <CardDescription>Your account details</CardDescription>
+          <CardTitle>Informasi Akun</CardTitle>
+          <CardDescription>Detail akun kamu</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <div>
             <p className="text-slate-400 text-sm">Email</p>
             <p className="text-white font-medium mt-1">{user?.email}</p>
-            <Badge className="mt-2 bg-green-500/20 text-green-400">Verified</Badge>
+            <Badge className="mt-2 bg-green-500/20 text-green-400">Terverifikasi</Badge>
           </div>
           <div>
             <p className="text-slate-400 text-sm">User ID</p>
@@ -107,7 +107,7 @@ export default function SettingsPage() {
             </code>
           </div>
           <div>
-            <p className="text-slate-400 text-sm">Account Created</p>
+            <p className="text-slate-400 text-sm">Akun Dibuat</p>
             <p className="text-white font-medium mt-1">
               {user?.metadata?.creationTime
                 ? new Date(user.metadata.creationTime).toLocaleDateString()
@@ -120,8 +120,8 @@ export default function SettingsPage() {
       {/* Update Profile */}
       <Card className="bg-slate-800 border-slate-700">
         <CardHeader>
-          <CardTitle>Update Profile</CardTitle>
-          <CardDescription>Change your display name</CardDescription>
+          <CardTitle>Perbarui Profil</CardTitle>
+          <CardDescription>Ubah nama tampilan kamu</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           {message && (
@@ -136,12 +136,12 @@ export default function SettingsPage() {
             </div>
           )}
           <div>
-            <label className="text-sm font-medium text-white">Display Name</label>
+            <label className="text-sm font-medium text-white">Nama Tampilan</label>
             <Input
               type="text"
               value={displayName}
               onChange={(e) => setDisplayName(e.target.value)}
-              placeholder="Your name"
+              placeholder="Nama kamu"
               className="mt-2 bg-slate-700 border-slate-600"
             />
           </div>

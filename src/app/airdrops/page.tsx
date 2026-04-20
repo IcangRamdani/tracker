@@ -82,8 +82,8 @@ export default function AirdropsPage() {
     <div className="space-y-6">
       <div className="flex justify-between items-center">
         <div>
-          <h1 className="text-3xl font-bold text-white">Airdrops</h1>
-          <p className="text-slate-400 mt-2">Manage your airdrop opportunities</p>
+          <h1 className="text-3xl font-bold text-white">Airdrop</h1>
+          <p className="text-slate-400 mt-2">Kelola peluang airdrop kamu</p>
         </div>
         <Button
           onClick={() => {
@@ -93,7 +93,7 @@ export default function AirdropsPage() {
           className="bg-blue-600 hover:bg-blue-700"
         >
           <Plus className="w-5 h-5 mr-2" />
-          Add Airdrop
+          Tambah Airdrop
         </Button>
       </div>
 

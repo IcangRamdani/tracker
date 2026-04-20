@@ -21,7 +21,7 @@ export default function WalletsPage() {
 
   const handleAddWallet = () => {
     if (!address || !label) {
-      alert('Please fill in all fields');
+      alert('Mohon isi semua kolom');
       return;
     }
 
@@ -61,15 +61,15 @@ export default function WalletsPage() {
     <div className="space-y-6">
       <div className="flex justify-between items-center">
         <div>
-          <h1 className="text-3xl font-bold text-white">Wallets</h1>
-          <p className="text-slate-400 mt-2">Manage your wallet addresses for airdrops</p>
+          <h1 className="text-3xl font-bold text-white">Wallet</h1>
+          <p className="text-slate-400 mt-2">Kelola alamat wallet untuk airdrop</p>
         </div>
         <Button
           onClick={() => setShowForm(!showForm)}
           className="bg-blue-600 hover:bg-blue-700"
         >
           <Plus className="w-5 h-5 mr-2" />
-          Add Wallet
+          Tambah Wallet
         </Button>
       </div>
 
@@ -79,17 +79,17 @@ export default function WalletsPage() {
           <CardContent className="pt-6">
             <div className="space-y-4">
               <div>
-                <label className="text-sm font-medium text-white">Wallet Label *</label>
+                <label className="text-sm font-medium text-white">Label Wallet *</label>
                 <Input
                   type="text"
-                  placeholder="e.g., Main Wallet, SecondaryWallet"
+                  placeholder="contoh: Wallet Utama, Wallet Cadangan"
                   value={label}
                   onChange={(e) => setLabel(e.target.value)}
                   className="mt-2 bg-slate-700 border-slate-600"
                 />
               </div>
               <div>
-                <label className="text-sm font-medium text-white">Wallet Address *</label>
+                <label className="text-sm font-medium text-white">Alamat Wallet *</label>
                 <Input
                   type="text"
                   placeholder="0x..."
@@ -111,7 +111,7 @@ export default function WalletsPage() {
                   <option value="optimism">Optimism</option>
                   <option value="solana">Solana</option>
                   <option value="base">Base</option>
-                  <option value="other">Other</option>
+                  <option value="other">Lainnya</option>
                 </select>
               </div>
               <div className="flex gap-2">
@@ -119,13 +119,13 @@ export default function WalletsPage() {
                   onClick={handleAddWallet}
                   className="bg-blue-600 hover:bg-blue-700"
                 >
-                  Add Wallet
+                  Tambah Wallet
                 </Button>
                 <Button
                   onClick={() => setShowForm(false)}
                   variant="outline"
                 >
-                  Cancel
+                  Batal
                 </Button>
               </div>
             </div>

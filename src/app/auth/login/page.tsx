@@ -54,8 +54,8 @@ export default function LoginPage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-950 to-blue-950 flex items-center justify-center p-4">
       <Card className="w-full max-w-md">
         <CardHeader className="space-y-2">
-          <CardTitle className="text-2xl">Sign In</CardTitle>
-          <CardDescription>Welcome back to Airdrop Tracker</CardDescription>
+          <CardTitle className="text-2xl">Masuk</CardTitle>
+          <CardDescription>Selamat datang di Airdrop Tracker</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           {error && (
@@ -69,7 +69,7 @@ export default function LoginPage() {
               <label className="text-sm font-medium">Email</label>
               <Input
                 type="email"
-                placeholder="your@email.com"
+                placeholder="email@anda.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -92,7 +92,7 @@ export default function LoginPage() {
               disabled={loading}
               className="w-full bg-blue-600 hover:bg-blue-700"
             >
-              {loading ? 'Signing in...' : 'Sign in'}
+              {loading ? 'Masuk...' : 'Masuk'}
             </Button>
           </form>
 

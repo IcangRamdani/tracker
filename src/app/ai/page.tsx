@@ -85,21 +85,21 @@ export default function AIPanel() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-3xl font-bold text-white">AI Panel</h1>
-        <p className="text-slate-400 mt-2">Analyze airdrops and get AI-powered insights</p>
+        <h1 className="text-3xl font-bold text-white">Panel AI</h1>
+        <p className="text-slate-400 mt-2">Analisis airdrop dengan bantuan AI</p>
       </div>
 
       {/* Input Section */}
       <Card className="bg-slate-800 border-slate-700">
         <CardHeader>
-          <CardTitle>Airdrop Analysis</CardTitle>
-          <CardDescription>Enter a project name or URL to analyze</CardDescription>
+          <CardTitle>Analisis Airdrop</CardTitle>
+          <CardDescription>Masukkan nama proyek atau URL untuk dianalisis</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="flex gap-2">
             <Input
               type="text"
-              placeholder="e.g., Uniswap, https://example.com/airdrop"
+              placeholder="contoh: Uniswap, https://example.com/airdrop"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               className="flex-1 bg-slate-700 border-slate-600"
@@ -121,12 +121,12 @@ export default function AIPanel() {
               {loading ? (
                 <>
                   <Loader className="w-4 h-4 mr-2 animate-spin" />
-                  Analyzing...
+                  Menganalisis...
                 </>
               ) : (
                 <>
                   <Brain className="w-4 h-4 mr-2" />
-                  Analyze
+                  Analisis
                 </>
               )}
             </Button>
@@ -138,12 +138,12 @@ export default function AIPanel() {
               {loading ? (
                 <>
                   <Loader className="w-4 h-4 mr-2 animate-spin" />
-                  Scoring...
+                  Memberi Skor...
                 </>
               ) : (
                 <>
                   <Brain className="w-4 h-4 mr-2" />
-                  Score
+                  Skor
                 </>
               )}
             </Button>

@@ -58,8 +58,8 @@ export default function AnalyticsPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-3xl font-bold text-white">Analytics</h1>
-        <p className="text-slate-400 mt-2">Performance metrics and insights</p>
+        <h1 className="text-3xl font-bold text-white">Analitik</h1>
+        <p className="text-slate-400 mt-2">Metrik performa dan insight</p>
       </div>
 
       {/* Key Metrics */}
@@ -67,13 +67,13 @@ export default function AnalyticsPage() {
         {[
           {
             icon: Target,
-            label: 'Total Airdrops',
+            label: 'Total Airdrop',
             value: analytics.totalAirdrops,
             color: 'blue',
           },
           {
             icon: TrendingUp,
-            label: 'Completion Rate',
+            label: 'Tingkat Penyelesaian',
             value: `${analytics.completionRate}%`,
             color: 'green',
           },
@@ -85,7 +85,7 @@ export default function AnalyticsPage() {
           },
           {
             icon: WalletIcon,
-            label: 'Total Wallets',
+            label: 'Total Wallet',
             value: analytics.totalWallets,
             color: 'purple',
           },
@@ -121,15 +121,15 @@ export default function AnalyticsPage() {
         {/* Top Category */}
         <Card className="bg-slate-800 border-slate-700">
           <CardHeader>
-            <CardTitle>Top Category</CardTitle>
-            <CardDescription>Most active airdrop category</CardDescription>
+            <CardTitle>Kategori Teratas</CardTitle>
+            <CardDescription>Kategori airdrop paling aktif</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="text-center">
               <p className="text-3xl font-bold text-white capitalize mb-2">
                 {analytics.bestCategory}
               </p>
-              <Badge className="capitalize">{analytics.bestCategoryCount} airdrops</Badge>
+              <Badge className="capitalize">{analytics.bestCategoryCount} airdrop</Badge>
             </div>
           </CardContent>
         </Card>
@@ -137,8 +137,8 @@ export default function AnalyticsPage() {
         {/* Top Wallet */}
         <Card className="bg-slate-800 border-slate-700">
           <CardHeader>
-            <CardTitle>Top Performing Wallet</CardTitle>
-            <CardDescription>Highest profit generating address</CardDescription>
+            <CardTitle>Wallet Terbaik</CardTitle>
+            <CardDescription>Alamat dengan profit tertinggi</CardDescription>
           </CardHeader>
           <CardContent>
             <div>

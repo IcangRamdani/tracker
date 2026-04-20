@@ -22,7 +22,7 @@ export default function ActivityPage() {
 
   const handleAddLog = () => {
     if (!description || !selectedAirdrop) {
-      alert('Please fill in all fields');
+      alert('Mohon isi semua kolom');
       return;
     }
 
@@ -59,15 +59,15 @@ export default function ActivityPage() {
     <div className="space-y-6">
       <div className="flex justify-between items-center">
         <div>
-          <h1 className="text-3xl font-bold text-white">Activity Log</h1>
-          <p className="text-slate-400 mt-2">Track your actions and progress</p>
+          <h1 className="text-3xl font-bold text-white">Log Aktivitas</h1>
+          <p className="text-slate-400 mt-2">Lacak aksi dan progres kamu</p>
         </div>
         <Button
           onClick={() => setShowForm(!showForm)}
           className="bg-blue-600 hover:bg-blue-700"
         >
           <Plus className="w-5 h-5 mr-2" />
-          Log Activity
+          Catat Aktivitas
         </Button>
       </div>
 
@@ -83,7 +83,7 @@ export default function ActivityPage() {
                   onChange={(e) => setSelectedAirdrop(e.target.value)}
                   className="w-full mt-2 px-3 py-2 rounded-lg bg-slate-700 border border-slate-600 text-white"
                 >
-                  <option value="">Select an airdrop</option>
+                  <option value="">Pilih airdrop</option>
                   {airdrops.map((a) => (
                     <option key={a.id} value={a.id}>
                       {a.name}
@@ -93,7 +93,7 @@ export default function ActivityPage() {
               </div>
 
               <div>
-                <label className="text-sm font-medium text-white">Action Type *</label>
+                <label className="text-sm font-medium text-white">Jenis Aksi *</label>
                 <select
                   value={action}
                   onChange={(e) => setAction(e.target.value)}
@@ -104,15 +104,15 @@ export default function ActivityPage() {
                   <option value="stake">Stake</option>
                   <option value="mint">Mint</option>
                   <option value="quest">Quest</option>
-                  <option value="claim">Claim</option>
+                  <option value="claim">Klaim</option>
                 </select>
               </div>
 
               <div>
-                <label className="text-sm font-medium text-white">Description *</label>
+                <label className="text-sm font-medium text-white">Deskripsi *</label>
                 <Input
                   type="text"
-                  placeholder="e.g., Completed level 3 quests"
+                  placeholder="contoh: Menyelesaikan quest level 3"
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
                   className="mt-2 bg-slate-700 border-slate-600"
@@ -124,13 +124,13 @@ export default function ActivityPage() {
                   onClick={handleAddLog}
                   className="bg-blue-600 hover:bg-blue-700"
                 >
-                  Log Activity
+                  Catat Aktivitas
                 </Button>
                 <Button
                   onClick={() => setShowForm(false)}
                   variant="outline"
                 >
-                  Cancel
+                  Batal
                 </Button>
               </div>
             </div>
